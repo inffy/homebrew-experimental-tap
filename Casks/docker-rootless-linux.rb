@@ -9,6 +9,11 @@ cask "docker-rootless-linux" do
   desc "Docker static binaries with rootless extras"
   homepage "https://docs.docker.com/engine/security/rootless/"
 
+  livecheck do
+    url "https://download.docker.com/linux/static/stable/#{arch}/"
+    regex(/href=.*?docker[._-]v?(\d+(?:\.\d+)+)\.tgz/i)
+  end
+
   depends_on formula: "slirp4netns"
   depends_on formula: "fuse-overlayfs"
   depends_on formula: "iproute2"
