@@ -11,6 +11,12 @@ class BlockGooseCliLinux < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    root_url "https://github.com/ublue-os/homebrew-experimental-tap/releases/download/block-goose-cli-linux-1.19.1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:  "2637c7dcbf1ce93094ebdd880dc98f463d669b40e1a88782cfde02ee82b515e8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "2e5e7a1b6ba5b503c294d720925abb9c9583b982219f48fb641a4687bb739b8b"
+  end
+
   depends_on "pkgconf" => :build
   depends_on "protobuf" => :build
   depends_on "rust" => :build
