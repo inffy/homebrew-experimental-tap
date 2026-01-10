@@ -18,7 +18,7 @@ jobs:
       - name: Extract version from formula
         id: version
         run: |
-          VERSION=$(grep -oP 'url ".*linux_mcp_server-\K[0-9.]+' Formula/linux-mcp-server.rb)
+          VERSION=$(grep -oP 'url ".*linux_mcp_server-\K[0-9]+\.[0-9]+\.[0-9]+' Formula/linux-mcp-server.rb)
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
           echo "Version: $VERSION"
 

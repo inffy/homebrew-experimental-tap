@@ -18,7 +18,7 @@ jobs:
       - name: Extract version from formula
         id: version
         run: |
-          VERSION=$(grep -oP 'url ".*refs/tags/v\K[0-9.]+' Formula/block-goose-cli-linux.rb)
+          VERSION=$(grep -oP 'url ".*refs/tags/v\K[0-9]+\.[0-9]+\.[0-9]+' Formula/block-goose-cli-linux.rb)
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
           echo "Version: $VERSION"
 
