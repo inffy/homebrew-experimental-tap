@@ -9,6 +9,12 @@ class BluefinContributorTools < Formula
     skip "Tracks the development branch; no tagged releases yet"
   end
 
+  bottle do
+    root_url "https://github.com/ublue-os/homebrew-experimental-tap/releases/download/bluefin-contributor-tools-0.2.1"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "d67119b831883ebf6fdbd2b37f2c03e9510251907d93d992b1e8ebac20d7a44f"
+  end
+
   on_macos do
     depends_on "node"
   end
