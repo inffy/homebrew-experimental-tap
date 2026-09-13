@@ -1,19 +1,10 @@
 class BluefinContributorTools < Formula
   desc "Contributor and review tooling for Project Bluefin"
   homepage "https://github.com/projectbluefin/review"
-  url "https://github.com/projectbluefin/review.git", branch: "omp-port"
-  version "0.2.1"
+  url "https://github.com/projectbluefin/review/archive/refs/tags/v26.08.05.tar.gz"
+  version "26.08.05"
+  sha256 "3e7f5f4c10a116497011c49536b356c7ff1a51e84d234e2a7551b6fb41ab2f4d"
   license "Apache-2.0"
-
-  livecheck do
-    skip "Tracks the development branch; no tagged releases yet"
-  end
-
-  bottle do
-    root_url "https://github.com/ublue-os/homebrew-experimental-tap/releases/download/bluefin-contributor-tools-0.2.1"
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "01ed39ffdfb2d90fb0af4817609e3efde5febcf866f21e5a637cd8539fa12689"
-  end
 
   on_macos do
     depends_on "node"
