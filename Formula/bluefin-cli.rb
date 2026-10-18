@@ -12,10 +12,10 @@ class BluefinCli < Formula
   end
 
   bottle do
-    root_url "https://github.com/ublue-os/homebrew-experimental-tap/releases/download/bluefin-cli-0.11.10"
-    rebuild 3
-    sha256 cellar: :any_skip_relocation, arm64_linux:  "a89f8d61b882ac9bc4eca6d938b171c28bf0d85a889482e6363d36e88155556d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "a6e1b73a15de8ed59c9cef02c1fe9582b529ff3f043b3e8091b3c61b822c32a0"
+    root_url "https://github.com/ublue-os/homebrew-experimental-tap/releases/download/bluefin-cli-0.11.11"
+    rebuild 4
+    sha256 cellar: :any_skip_relocation, arm64_linux:  "506ce658e0c05a456e1b5738e649fb74a397651d62527317e1a7d4b2ec8d082a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "46b9f4d243be409bb1d37bb202d88312784c82b66e05c0a92854ad90ec56dd8e"
   end
 
   depends_on "go" => :build
